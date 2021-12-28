@@ -5,10 +5,30 @@ let rendenizaSquares = [];
 let arr = [];
 Quadrados();
 
+
 function play_again()
 {
     resposta = displayRGB();
     Quadrados();
+}
+
+function difficulty(dado)
+{
+    if(dado == 'Easy') numQuadrados = 3;
+    if(dado == 'Medium') numQuadrados = 6;
+    if(dado == 'Hard') numQuadrados = 9;
+    play_again();
+    styleBtn(dado)
+}
+
+function styleBtn(id)
+{
+    document.querySelector('#Easy').classList.remove('atvBtn')
+    document.querySelector('#Medium').classList.remove('atvBtn')
+    document.querySelector('#Hard').classList.remove('atvBtn')
+    document.querySelector(`#${id}`)
+        .classList.toggle('atvBtn');
+
 }
 
 //Gerando RGB que será usando como referencia no começo da 

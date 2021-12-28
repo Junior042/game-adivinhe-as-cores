@@ -3,14 +3,85 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #273036;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+nav {
+    text-align: center;
+}
+
+nav h1 {
+    font-size: 30px;
+}
+
+nav h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+header button {
+    padding: 10px 20px;
+    margin: 10px 7px;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgb(141, 5, 253);
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    box-shadow: 2px 2px 4px rgb(255, 255, 255, 0.5);
+    transition: all .4s ease-in;
+}
+
+header button::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(141, 5, 253);
+    z-index: -1;
+    transition: all .6s ease-in;
+}
+
+header button:hover{
+    box-shadow: 2px 2px 4px  2px rgb(255, 255, 255, 0.7);
+}
+
+header button:hover::before{
+    width: 100%;
+}
+
+.atvBtn{
+    background: rgb(141, 5, 253);
 }
 
 #cont-colors{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    background: grey;
-    width: 380px;
+    gap: 8px;
+    background: rgb(138, 138, 138);
+    max-width: 400px;
+    padding: 20px 10px;
+    border-radius: 8px;
+    border: 2px solid rgb(141, 5, 253);
+    transition: all .6s ease-in-out;
 }
 
 .square-color{
@@ -18,5 +89,41 @@
     height: 100px;
     background: red;
     border-radius: 8px;
-    margin: 10px 0px;
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+footer p a{
+    text-decoration: none;
+}
+
+footer p a:link{
+    color: white;
+}
+
+footer p a:visited{
+    color: white;
+}
+
+@media screen and (max-width: 400px){
+    #new_Colors{
+        width: 90%;
+    }
+    
+    hearder{
+        text-align: center;
+    }
+
+    #cont-colors{
+        margin: 0px 5%;
+    }
+
+    .square-color{
+        width: 90px;
+        height: 90px;
+    }
+
 }
