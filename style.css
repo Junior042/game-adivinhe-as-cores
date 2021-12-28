@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#cont-colors{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: grey;
+    width: 380px;
+}
+
+.square-color{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
