@@ -5,6 +5,12 @@ let rendenizaSquares = [];
 let arr = [];
 Quadrados();
 
+function play_again()
+{
+    resposta = displayRGB();
+    Quadrados();
+}
+
 //Gerando RGB que será usando como referencia no começo da 
 function geraCores()
 {
@@ -31,6 +37,7 @@ function displayRGB()
 
 function Quadrados()
 {
+    arr = [];
 
     for (let i = 1; i <= numQuadrados; i++)
     {
